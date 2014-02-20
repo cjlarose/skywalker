@@ -27,13 +27,9 @@ struct Instance {
     4: optional string address;
 }
 
-exception InvalidToken {
-    1: optional string message;
-}
-
 service Anakin {
     /*
      * Given a driver, list all instances.
      */
-    list<Instance> list_all_instances(1: Driver driver) throws (1: InvalidToken invalid_token);
+    list<Instance> list_all_instances(1: Driver driver);
 }
