@@ -20,6 +20,14 @@ struct Driver {
     2: required Identity identity;
 }
 
+struct OpenStackDriver {
+    1: required string key;
+    2: optional string secret;
+    3: option string host;
+    4: optional i32 port; // Don't use i16; integers types are all signed
+    5: optional string version;
+}
+
 struct Instance {
     1: required string id;
     2: required string image_id;
