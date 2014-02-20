@@ -14,7 +14,11 @@ struct Provider {
 }
 
 typedef map<string, string> Identity
-typedef string DriverToken
+
+struct Driver {
+    1: required Provider provider;
+    2: required Identity identity;
+}
 
 struct Instance {
     1: required string id;
@@ -29,13 +33,7 @@ exception InvalidToken {
 
 service Anakin {
     /*
-     * Given a provider and an identity, return a token to refer to the driver
-     * to use in future requests.
+     * Given a driver, list all instances.
      */
-    DriverToken get_driver(1: Provider provider, 2: Identity identity);
-
-    /*
-     * Given a driver token, list all instances.
-     */
-    list<Instance> list_all_instances(1: DriverToken driver) throws (1: InvalidToken invalid_token);
+    list<Instance> list_all_instances(1: Driver driver) throws (1: InvalidToken invalid_token);
 }
