@@ -1,1 +1,2 @@
 git+git://github.com/iPlantCollaborativeOpenSource/rtwo.git#egg=rtwo
+git+git://github.com/jmatt/threepio.git#egg=threepio
