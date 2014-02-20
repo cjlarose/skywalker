@@ -1,3 +1,5 @@
+namespace py atmo_soa.auth
+
 enum ProviderType {
     OpenStack,
     AWS,
