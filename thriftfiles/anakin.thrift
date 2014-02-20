@@ -1,4 +1,4 @@
-namespace py atmo_soa.auth
+namespace py atmo_soa.anakin
 
 enum ProviderType {
     OpenStack,
