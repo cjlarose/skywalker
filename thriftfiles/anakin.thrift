@@ -6,26 +6,19 @@ enum ProviderType {
     Eucalyptus
 }
 
-typedef map<string, string> ProviderOptions
-
 struct Provider {
     1: required ProviderType type;
-    2: optional ProviderOptions options;
+    2: optional string url;
+    3: optional string identifier;
 }
 
 typedef map<string, string> Identity
+typedef map<string, string> ProviderCredentials
 
 struct Driver {
     1: required Provider provider;
     2: required Identity identity;
-}
-
-struct OpenStackDriver {
-    1: required string key;
-    2: optional string secret;
-    3: option string host;
-    4: optional i32 port; // Don't use i16; integers types are all signed
-    5: optional string version;
+    3: optional ProviderCredentials provider_credentials;
 }
 
 struct Instance {
