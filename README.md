@@ -22,4 +22,13 @@ python setup.py develop
 pip install -r requirements.txt
 ```
 
+Fire it up
+----------
+
+```bash
+python anakin/server.py
+```
+
+The Thrift server will expose itself on port `8000`.
+
 [1]: http://thrift.apache.org/
