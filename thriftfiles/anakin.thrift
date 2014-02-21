@@ -25,7 +25,8 @@ struct Instance {
     1: required string id;
     2: required string image_id;
     3: optional string name;
-    4: optional string address;
+    4: optional list<string> public_addresses;
+    5: optional list<string> private_addresses;
 }
 
 service Anakin {
