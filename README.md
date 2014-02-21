@@ -17,9 +17,18 @@ ln -s gen-py/atmo_soa ./atmo_soa
 
 Then install:
 
-``bash
+```bash
 python setup.py develop
 pip install -r requirements.txt
 ```
+
+Fire it up
+----------
+
+```bash
+python anakin/server.py
+```
+
+The Thrift server will expose itself on port `8000`.
 
 [1]: http://thrift.apache.org/
