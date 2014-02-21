@@ -3,16 +3,16 @@ from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol
 from thrift.server import TServer
 
-from atmo_soa.anakin import Anakin
+from atmo_soa.skywalker import Skywalker
 
-from anakin.handler import Handler
+from skywalker.handler import Handler
 
 if __name__ == "__main__":
     port = 8000
 
     handler = Handler()
 
-    processor = Anakin.Processor(handler)
+    processor = Skywalker.Processor(handler)
     transport = TSocket.TServerSocket(port=port)
     tfactory = TTransport.TBufferedTransportFactory()
     pfactory = TBinaryProtocol.TBinaryProtocolFactory()

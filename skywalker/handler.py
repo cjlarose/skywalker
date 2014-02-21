@@ -4,7 +4,7 @@ from rtwo.provider import EucaProvider, OSProvider
 from rtwo.identity import EucaIdentity, OSIdentity
 from rtwo.driver import AWSDriver, EucaDriver, OSDriver
 
-from atmo_soa.anakin.ttypes import Instance, ProviderType
+from atmo_soa.skywalker.ttypes import Instance, ProviderType
 
 class Handler(object):
 
@@ -21,7 +21,7 @@ class Handler(object):
     @staticmethod
     def _get_driver(tdriver):
         """
-        Given an atmo_soa.anakin.ttypes.driver, convert to an instance 
+        Given an atmo_soa.skywalker.ttypes.driver, convert to an instance 
         rtwo.driver.BaseDriver
         """
         if not tdriver.provider_credentials:
@@ -40,7 +40,7 @@ class Handler(object):
     def _convert_instance(instance):
         """
         Given an instance of rtwo.instance.Instance, return
-        an instance of atmo_soa.anakin.ttypes.Instance
+        an instance of atmo_soa.skywalker.ttypes.Instance
         """
         public_addresses = []
         if instance.ip:

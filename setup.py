@@ -4,7 +4,7 @@ from distutils.core import setup
 from setuptools import find_packages
 
 setup(
-    name='anakin',
+    name='skywalker',
     version='0.1',
     description='Cloud Interface as a Service',
     author='iPlantCollaborative',

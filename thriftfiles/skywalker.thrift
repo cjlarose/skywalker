@@ -29,7 +29,7 @@ struct Instance {
     5: optional list<string> private_addresses;
 }
 
-service Anakin {
+service Skywalker {
     /*
      * Given a driver, list all instances.
      */

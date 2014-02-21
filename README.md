@@ -1,5 +1,5 @@
-Anakin
-======
+Skywalker
+=========
 
 Uniform cloud interface as a service.
 
@@ -11,7 +11,7 @@ Anakin depends on Thirft-generated files in a module called `atmo_soa`. To creat
 From the root directory of this repository:
 
 ```bash
-thrift --gen py thriftfiles/anakin.thrift
+thrift --gen py thriftfiles/skywalker.thrift
 ln -s gen-py/atmo_soa ./atmo_soa
 ```
 
