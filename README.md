@@ -26,7 +26,7 @@ Fire it up
 ----------
 
 ```bash
-python anakin/server.py
+python skywalker/server.py
 ```
 
 The Thrift server will expose itself on port `8000`.
