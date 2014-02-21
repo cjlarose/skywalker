@@ -36,14 +36,28 @@ class Handler(object):
         driver = driver_cls(provider, identity, **tdriver.provider_credentials)
         return driver
 
+    @staticmethod
+    def _convert_instance(instance):
+        """
+        Given an instance of rtwo.instance.Instance, return
+        an instance of atmo_soa.anakin.ttypes.Instance
+        """
+        public_addresses = []
+        if instance.ip:
+            public_addresses.append(str(instance.ip))
+
+        return Instance(
+            id=instance.id,
+            image_id=instance.image_id,
+            name=instance.name,
+            public_addresses=public_addresses
+        )
+
     def list_all_instances(self, driver):
         try:
             rtwo_driver = Handler._get_driver(driver)
             instances = rtwo_driver.list_all_instances()
+            return [Handler._convert_instance(i) for i in instances]
         except Exception as e:
             traceback.print_exc()
             print e.message
-        #print instances
-        return [
-            Instance(id='1234')
-        ]
