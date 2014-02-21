@@ -17,7 +17,7 @@ ln -s gen-py/atmo_soa ./atmo_soa
 
 Then install:
 
-``bash
+```bash
 python setup.py develop
 pip install -r requirements.txt
 ```
